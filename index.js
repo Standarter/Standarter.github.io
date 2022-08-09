@@ -1,10 +1,11 @@
+SpinPressed = false;
 function AddElementToCase()
 {
     if (document.getElementById("TextWithGames") != "")
     {
         var ItemsList = document.getElementById("TextWithGames").value.split("\n");
         localStorage.setItem("TextWithGames", document.getElementById("TextWithGames").value);
-        for (var Count = 0; Count < 10; Count++)
+        for (var Count = 0; Count < 2; Count++)
         {
             for (var ItemIndex = 0; ItemIndex < ItemsList.length; ItemIndex++)
             {
@@ -32,19 +33,33 @@ function OnLoadPage()
 function SpinButton()
 {
     var Items = document.querySelectorAll(".Item");
-    var RandomInput = Math.random(); 
-    for (var ElementIndex = 0; ElementIndex < Array.from(Items).length; ElementIndex++)
+    if (SpinPressed == false)
     {
-        Items[ElementIndex].style.left = parseInt(Items[ElementIndex].style.left) + parseInt(-(250)*Array.from(Items).length/2*RandomInput) + "px";
+        if (Array.from(Items).length > 0)
+        {
+            OnButtonClick2();
+        }
+        document.getElementById("ButtonSpin").style.backgroundColor = "7a7a7a";
+        SpinPressed = true;
+        var RandomInput = Math.random(); 
+        for (var ElementIndex = 0; ElementIndex < Array.from(Items).length; ElementIndex++)
+        {
+            Items[ElementIndex].style.left = parseInt(Items[ElementIndex].style.left) + parseInt(-(250)*Array.from(Items).length*RandomInput) + "px";
+        }
     }
 }
 function ResetButton()
 {
-    var Items = document.querySelectorAll(".Item");
-    var RandomInput = Math.random(); 
-    for (var ElementIndex = 0; ElementIndex < Array.from(Items).length; ElementIndex++)
+    if (SpinPressed == true)
     {
-        Items[ElementIndex].style.left = 0 + "px";
+        document.getElementById("ButtonSpin").style.backgroundColor = "#212121";
+        SpinPressed = false;
+        var Items = document.querySelectorAll(".Item");
+        var RandomInput = Math.random(); 
+        for (var ElementIndex = 0; ElementIndex < Array.from(Items).length; ElementIndex++)
+        {
+            Items[ElementIndex].style.left = 0 + "px";
+        }
     }
 }
 function OnButtonClick1()
