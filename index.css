@@ -52,7 +52,22 @@
     margin-top: 10px;
     align-items: center;
     background-color: white;
+    transition: 0.5s;
     
+}
+.Item:hover
+{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    border: 3px;
+    border-radius: 5px;
+    border-color: #38acff;
+    border-style: solid;
+    margin-top: 10px;
+    align-items: center;
+    background-color: white;
+    transition: 0.5s;
 }
 .Item #Image
 {
@@ -104,6 +119,17 @@
     margin-top: 10px;
     height: 60px;
     border: 1px black solid;
+    transition: 0.5s;
+}
+#NewsTextMain:hover
+{
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    height: 60px;
+    border: 2px #38acff solid;
+    transition: 0.5s;
 }
 #BaseText
 {
@@ -115,4 +141,126 @@
     position: absolute;
     bottom: 0px;
     right: 10px;
+}
+@media screen and (max-width: 600px)
+{
+    #Background
+    {
+        z-index: -9999;
+        position: fixed;
+        object-fit: cover;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        left: 0px;
+        top: 0px;
+    }
+    #ItemContainer
+    {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        left: 0px;
+    }
+    #NewsContainer
+    {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        border: 3px;
+        border-radius: 5px;
+        border-color: black;
+        border-style: solid;
+        height: auto;
+        margin: 0 auto;
+        right: 0px;
+        margin-top: 50px;
+        background-color: white;
+        padding-bottom: 25px;
+    }
+    #BaseContainer
+    {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        justify-content: center;
+        margin: 50px auto;
+    }
+    .Item
+    {
+        display: flex;
+        width: 100%;
+        height: 70px;
+        border: 3px;
+        border-radius: 5px;
+        border-color: black;
+        border-style: solid;
+        margin-top: 10px;
+        align-items: center;
+        background-color: white;
+        
+    }
+    .Item #Image
+    {
+        width: 60px;
+        height: 60px;
+        border: 3px;
+        border-radius: 100%;
+        border-style: solid;
+        overflow: hidden;
+        
+        margin-left: 10px;
+    }
+    .Item #Image #ImageIMG
+    {
+        width: 70px;
+        height: 70px;
+    }
+    .Item #SiteLink
+    {
+        width: calc(100% - 80px);
+        height: 70px;
+        line-height: 70px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 35px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0 auto;
+        max-width: 75%;
+    }
+    #FirstItem
+    {
+        margin-top: 0px;
+    }
+    #NewsText
+    {
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        font-size: 40px;
+    }
+    #NewsTextMain
+    {
+        position: relative;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 10px;
+        height: 60px;
+        border: 1px black solid;
+    }
+    #BaseText
+    {
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+    #Date
+    {
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+    }
 }
