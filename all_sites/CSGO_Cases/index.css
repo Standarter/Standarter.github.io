@@ -219,6 +219,23 @@ body
     border-color: white;
     border-style: solid;
 }
+#StartPageButton
+{
+    font-size: 25px;
+    position: absolute;
+    background: #212121;
+    top: 10px;
+    left: 10px;
+    color: white;
+    border: 1px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
 @media screen and (max-width: 800px)
 {
     body
