@@ -44,8 +44,8 @@ body
     padding-left: 10px;
     padding-right: 10px;
     left: 1px;
-    transition: 10s;
-    transition-timing-function: cubic-bezier(.10, .10, 0, 1);
+    transition: left 10s cubic-bezier(.10, .10, 0, 1) 0s, font-size, 
+                line-height 1s linear 0s;
     background: rgb(134,134,134);
     background: linear-gradient(180deg, rgba(134,134,134,1) 0%, rgba(33,33,33,1) 10%, rgba(33,33,33,1) 88%, rgba(173,171,171,1) 100%);
 }
@@ -53,10 +53,9 @@ body
 {
     position: relative;
     flex: none;
-    font-size: 35px;
+    font-size: 26px;
     outline: 1px;
     height: 75px;
-    width: 500px;
     text-shadow: 1px 0 1px #ff6b6b, 
     0 1px 1px #ff6b6b, 
     -1px 0 1px #ff6b6b, 
@@ -64,7 +63,7 @@ body
     outline-style: solid;
     outline-color: white;
     vertical-align: middle;
-    line-height: 75px;
+    line-height: 37.5px;
     padding-left: 10px;
     padding-right: 10px;
     left: 1px;
@@ -81,7 +80,7 @@ body
     align-self: center;
     z-index: 1;
     border: 2px;
-    border-color: black;
+    border-color: white;
     border-style: solid;
     pointer-events: none;
 }
@@ -239,6 +238,23 @@ body
     transition: 0.5s;
     transition-timing-function: ease-in-out;
 }
+#StartPageButton:hover
+{
+    font-size: 25px;
+    position: absolute;
+    background: #212121;
+    top: 10px;
+    left: 10px;
+    color: white;
+    border: 2px;
+    border-radius: 100%;
+    border-color: red;
+    border-style: solid;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
 @media screen and (max-width: 800px)
 {
     body
@@ -323,7 +339,7 @@ body
         left: 50%;
         height: 100px;
         border: 2px;
-        border-color: black;
+        border-color: white;
         border-style: solid;
         align-self: center;
         z-index: 1;
@@ -457,7 +473,7 @@ body
         position: relative;
         margin: 0 auto;
         margin-top: 25px;
-        height: 300px;
+        height: calc(100vh - 9*50px);
         width: 70%;
         overflow-y: hidden;
         background-color: #212121;
