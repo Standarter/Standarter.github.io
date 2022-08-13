@@ -53,20 +53,16 @@ body
 {
     position: relative;
     flex: none;
-    font-size: 26px;
     outline: 1px;
-    height: 75px;
-    text-shadow: 1px 0 1px #ff6b6b, 
-    0 1px 1px #ff6b6b, 
-    -1px 0 1px #ff6b6b, 
-    0 -1px 1px #ff6b6b;
     outline-style: solid;
     outline-color: white;
     vertical-align: middle;
-    line-height: 37.5px;
     line-break: auto;
+    line-height: normal;
+    display: flex;
     padding-left: 10px;
     padding-right: 10px;
+    overflow: auto;
     left: 1px;
     transition: 1s;
     transition-timing-function: cubic-bezier(.10, .10, 0, 1);
@@ -74,9 +70,18 @@ body
 .Item:hover #ItemText
 {
     position: relative;
-    flex: none;
-    width: 65%;
-    margin: 0 auto;
+    width: 85%;
+    color: white;
+    margin: auto auto;
+    text-shadow: 1px 0 1px black, 
+    0 1px 1px black, 
+    -1px 0 1px black, 
+    0 -1px 1px black;
+    font-size: 65%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.10, .10, 0, 1);
 }
 #Table #RedLine
 {
