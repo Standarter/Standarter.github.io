@@ -4,8 +4,16 @@ function AddElementToCase()
     if (document.getElementById("TextWithGames") != "")
     {
         var ItemsList = document.getElementById("TextWithGames").value.split("\n");
+        var ItemsRealCount = 0;
+        for (var ItemIndex = 0; ItemIndex < ItemsList.length; ItemIndex++)
+        {
+            if (String(ItemsList[ItemIndex]) != "")
+            {
+                ItemsRealCount += 1;
+            }
+        }
         localStorage.setItem("TextWithGames", document.getElementById("TextWithGames").value);
-        if (ItemsList.length < 10)
+        if (ItemsRealCount < 10)
         {
             for (var Count = 0; Count < 5; Count++)
             {
