@@ -5,15 +5,38 @@ function AddElementToCase()
     {
         var ItemsList = document.getElementById("TextWithGames").value.split("\n");
         localStorage.setItem("TextWithGames", document.getElementById("TextWithGames").value);
-        for (var Count = 0; Count < 2; Count++)
+        if (ItemsList.length < 10)
         {
-            for (var ItemIndex = 0; ItemIndex < ItemsList.length; ItemIndex++)
+            for (var Count = 0; Count < 5; Count++)
             {
-            var CreatedItem = document.createElement("div");
-            CreatedItem.className = "Item";
-            CreatedItem.style = "left: 0px;";
-            CreatedItem.innerHTML = '<div id="ItemText">' + String(ItemsList[ItemIndex]) + '</div>';
-            document.getElementById("Table").append(CreatedItem);
+                for (var ItemIndex = 0; ItemIndex < ItemsList.length; ItemIndex++)
+                {
+                    if (String(ItemsList[ItemIndex]) != "")
+                    {
+                        var CreatedItem = document.createElement("div");
+                        CreatedItem.className = "Item";
+                        CreatedItem.style = "left: 0px;";
+                        CreatedItem.innerHTML = '<div id="ItemText">' + String(ItemsList[ItemIndex]) + '</div>';
+                        document.getElementById("Table").append(CreatedItem);
+                    }
+                }
+            }
+        }
+        else
+        {
+            for (var Count = 0; Count < 2; Count++)
+            {
+                for (var ItemIndex = 0; ItemIndex < ItemsList.length; ItemIndex++)
+                {
+                    if (String(ItemsList[ItemIndex]) != "")
+                    {
+                        var CreatedItem = document.createElement("div");
+                        CreatedItem.className = "Item";
+                        CreatedItem.style = "left: 0px;";
+                        CreatedItem.innerHTML = '<div id="ItemText">' + String(ItemsList[ItemIndex]) + '</div>';
+                        document.getElementById("Table").append(CreatedItem);
+                    }
+                }
             }
         }
     }
