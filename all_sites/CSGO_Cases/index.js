@@ -108,3 +108,33 @@ function OnButtonClick3()
     document.getElementById("OnClick3").volume = 0.1;
     document.getElementById("OnClick3").play();
 }
+function AutoResizeText(Element)
+{
+    ElementWidth = getComputedStyle(Element).width;
+    ElementHeight = getComputedStyle(Element).height;
+    ElementText = Element.innerText
+}
+function SaveButtonToIndex(SaveIndex)
+{
+    localStorage.setItem("SaveSlot" + SaveIndex, document.getElementById("TextWithGames").value);
+}
+function LoadButtonToIndex(SaveIndex)
+{
+    document.getElementById("TextWithGames").value = localStorage.getItem("SaveSlot" + SaveIndex);
+}
+function InfoButton()
+{
+    InfoText = "Этот сайт сделан для прокрутки разных элементов и выбора чего-то на основе рандома" + "\n";
+    InfoText += "Для начала прокрутки нужно вписать текст в текстовое поле, каждый элемент разледен клавишей Enter" + "\n";
+    InfoText += "Ввода нужно нужно нажать Spin, чтоб началась прокрутка, как прокрутка закончилась, то нужно нажать" + "\n";
+    InfoText += "На клавишу Reset, чтоб все вернулось к начальному состоянию" + "\n";
+    InfoText += "Так же, теперь на сайте есть слоты сохранения и, если вы ввели что-то, можно нажать S и там останется то" + "\n";
+    InfoText += "Значение, что вы ввели, если перезагрузить страницу (или нет) и нажать L, то значение текстового поля заменится" + "\n";
+    InfoText += "На то, что вы сохранили" + "\n";
+    InfoText += "Важно:" + "\n";
+    InfoText += "1) После нажатия на добавление элементов текст в текстовом поле сохранится даже после перезагрузки страницы" + "\n";
+    InfoText += "2) Чтоб пропали элементы из 'Кейса', нужно перезагрузить страницу, иначе никак" + "\n";
+    InfoText += "3) После нажатия кнопки L все введенное не сохранится в текстовом поле, только после нажатия кнопки добавления" + "\n";
+    InfoText += "";
+    alert(InfoText);
+}
