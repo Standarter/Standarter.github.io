@@ -278,7 +278,7 @@ body
     border-style: solid;
     transition: 0.5s;
 }
-#SaveLoadButton
+.SaveLoadButton
 {
     font-size: 25px;
     position: relative;
@@ -296,7 +296,7 @@ body
     transition: 0.5s;
     transition-timing-function: linear;
 }
-#SaveLoadButton:hover
+.SaveLoadButton:hover
 {
     font-size: 25px;
     position: relative;
@@ -599,6 +599,7 @@ body
         position: relative;
         margin: 0 auto;
         margin-top: 25px;
+        min-height: 200px;
         height: calc(100vh - 9*50px);
         width: 70%;
     }

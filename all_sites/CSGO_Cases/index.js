@@ -15,17 +15,37 @@ function AddElementToCase()
         localStorage.setItem("TextWithGames", document.getElementById("TextWithGames").value);
         if (ItemsRealCount < 10)
         {
-            for (var Count = 0; Count < 5; Count++)
+            if (ItemsRealCount < 5)
             {
-                for (var ItemIndex = 0; ItemIndex < ItemsList.length; ItemIndex++)
+                for (var Count = 0; Count < 10; Count++)
                 {
-                    if (String(ItemsList[ItemIndex]) != "")
+                    for (var ItemIndex = 0; ItemIndex < ItemsList.length; ItemIndex++)
                     {
-                        var CreatedItem = document.createElement("div");
-                        CreatedItem.className = "Item";
-                        CreatedItem.style = "left: 0px;";
-                        CreatedItem.innerHTML = '<div id="ItemText">' + String(ItemsList[ItemIndex]) + '</div>';
-                        document.getElementById("Table").append(CreatedItem);
+                        if (String(ItemsList[ItemIndex]) != "")
+                        {
+                            var CreatedItem = document.createElement("div");
+                            CreatedItem.className = "Item";
+                            CreatedItem.style = "left: 0px;";
+                            CreatedItem.innerHTML = '<div id="ItemText">' + String(ItemsList[ItemIndex]) + '</div>';
+                            document.getElementById("Table").append(CreatedItem);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (var Count = 0; Count < 5; Count++)
+                {
+                    for (var ItemIndex = 0; ItemIndex < ItemsList.length; ItemIndex++)
+                    {
+                        if (String(ItemsList[ItemIndex]) != "")
+                        {
+                            var CreatedItem = document.createElement("div");
+                            CreatedItem.className = "Item";
+                            CreatedItem.style = "left: 0px;";
+                            CreatedItem.innerHTML = '<div id="ItemText">' + String(ItemsList[ItemIndex]) + '</div>';
+                            document.getElementById("Table").append(CreatedItem);
+                        }
                     }
                 }
             }
@@ -72,7 +92,7 @@ function SpinButton()
         }
         document.getElementById("ButtonSpin").style.backgroundColor = "7a7a7a";
         SpinPressed = true;
-        var RandomInput = Math.random(); 
+        var RandomInput = Math.random();
         for (var ElementIndex = 0; ElementIndex < Array.from(Items).length; ElementIndex++)
         {
             Items[ElementIndex].style.left = parseInt(Items[ElementIndex].style.left) + parseInt(-(250)*Array.from(Items).length*RandomInput) + "px";
@@ -117,10 +137,16 @@ function AutoResizeText(Element)
 function SaveButtonToIndex(SaveIndex)
 {
     localStorage.setItem("SaveSlot" + SaveIndex, document.getElementById("TextWithGames").value);
+    document.getElementById("ButtonLoaded" + SaveIndex).style.borderColor = "green";
 }
 function LoadButtonToIndex(SaveIndex)
 {
     document.getElementById("TextWithGames").value = localStorage.getItem("SaveSlot" + SaveIndex);
+}
+function ResetButtonToIndex(SaveIndex)
+{
+    localStorage.setItem("SaveSlot" + SaveIndex, "");
+    document.getElementById("ButtonLoaded" + SaveIndex).style.borderColor = "red";
 }
 function InfoButton()
 {
@@ -137,4 +163,15 @@ function InfoButton()
     InfoText += "3) После нажатия кнопки L все введенное не сохранится в текстовом поле, только после нажатия кнопки добавления" + "\n";
     InfoText += "";
     alert(InfoText);
+}
+document.addEventListener("DOMContentLoaded", function() {
+    for (var i = 1; i <= 10; i++) { LoadStorageFunc(document.getElementById("ButtonLoaded" + i), i); }
+})
+function LoadStorageFunc(Element, SaveIndex)
+{
+    if (localStorage.getItem("SaveSlot" + SaveIndex) != "") {
+        Element.style.borderColor = "green";
+    } else {
+        Element.style.borderColor = "red";
+    }
 }
