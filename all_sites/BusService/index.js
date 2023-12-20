@@ -227,13 +227,17 @@ function BusSearch(Name)
     document.getElementById("BusName").innerText = "Номер автобуса: " + BusesMap.get(Name)[0];
     document.getElementById("BusType").innerText = "Тип: " + BusesMap.get(Name)[1];
     document.getElementById("BusTime").innerText = "Время ожидания: " + BusesMap.get(Name)[2];
-    document.getElementById("StartPos").innerText = "Начала поездок: " + BusesMap.get(Name)[3];
-    document.getElementById("EndPos").innerText = "Конец поездок: " + BusesMap.get(Name)[4];
-    document.getElementById("StartTime").innerText = "Нач. ост.: " + BusesMap.get(Name)[5];
-    document.getElementById("EndTime").innerText = "Кон. ост.: " + BusesMap.get(Name)[6];
+    document.getElementById("StartPos").innerText = "Нач. ост.: " + BusesMap.get(Name)[3];
+    document.getElementById("EndPos").innerText = "Кон. ост.: " + BusesMap.get(Name)[4];
+    document.getElementById("StartTime").innerText = "Начала поездок: " + BusesMap.get(Name)[5];
+    document.getElementById("EndTime").innerText = "Конец поездок: " + BusesMap.get(Name)[6];
     document.getElementById("YandexURL").href = BusesMap.get(Name)[7];
     document.getElementById("2GISURL").href = BusesMap.get(Name)[9];
     document.getElementById("busmapimage").style.backgroundImage = "url('Images/" + BusesMap.get(Name)[10] + "')";
     scrollToY(0, 1500, 'easeOutSine');
 }
 BusSearch("Unsetted");
+/*
+document.getElementById("StartTime").innerText = "Нач. ост.: " + BusesMap.get(Name)[5];
+    document.getElementById("EndTime").innerText = "Кон. ост.: " + BusesMa
+*/
