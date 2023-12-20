@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div id="uppermenu">
+        <div id="menuimage1">
+        </div>
+        <div id="menutext1">
+            Расписание<br>
+            автобусов<br>
+            <span style="color: #ff9d00; font-size: 50px; ">ОНЛАЙН</span></div>
+    </div>
+    <div id="middlemenu">
+        <div id="businfo">
+            <dl>
+                <dt>Автобус:</dt>
+                <dd id="BusName">Номер автобуса: </dd>
+                <dd id="BusType">Тип: </dd>
+                <dd id="BusTime">Время ожидания: </dd>
+                <br>
+                <dt>Информация:</dt>
+                <dd id="StartTime">Начала поездок: </dd>
+                <dd id="EndTime">Конец поездок: </dd>
+                <dd id="StartPos">Нач. ост.: </dd>
+                <dd id="EndPos">Кон. ост.: </dd>
+                <br>
+                <dt>Дополнительно:</dt>
+                <dd><a id="YandexURL" href="http://">Yandex Maps</a></dd>
+                <dd><a id="2GISURL" href="http://">2GIS Maps</a></dd>
+                <dd><a id="GoogleURL" href="https://yandex.ru/maps/193/voronezh/probki/?ll=39.200292%2C51.660779&source=traffic&z=12">Пробки</a></dd>
+              </dl>
+        </div>
+        <div id="busmap">
+            <div id="busmapimage"></div>
+        </div>
+    </div>
+    <div id="middlemenu2">
+        <div id="cardcontainer">
+            <div class="buscard" onclick="BusSearch('5')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">5</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('9')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">9</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('27')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">27</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('32')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">32</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('35')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">35</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('49')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">49</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('61')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">61</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('64')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">64</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('90')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">90</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('120a')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">120а</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('366a')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">366а</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('366v')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">366в</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('25')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">25</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('37')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">37</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('40')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">40</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('97')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">97</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('7')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">7</div>
+            </div>
+            <div class="buscard" onclick="BusSearch('99')">
+                <div class="imagecontainer">
+                    <div class="buscardimage"></div>
+                </div>
+                <div class="buscardtext">99</div>
+            </div>
+        </div>
+    </div>
+    <div id="bottommenu">
+        <div id="persons">
+            <div id="person">
+                <div id="info">
+                    <div id="name">Эрлик Алексей</div>
+                    <div id="role">Роль: Финансист, документовед</div>
+                </div>
+                <div id="socials">
+                    <div id="TelegramBW"></div>
+                    <div id="VK" onclick="window.location.href = 'https://vk.com/alex__alekseev'"></div>
+                </div>
+            </div>
+            <div id="person">
+                <div id="info">
+                    <div id="name">Лизин Александр</div>
+                    <div id="role">Роль: Аналитик</div>
+                </div>
+                <div id="socials">
+                    <div id="TelegramBW"></div>
+                    <div id="VK" onclick="window.location.href = 'https://vk.com/yunzeme'"></div>
+                </div>
+            </div>
+            <div id="person">
+                <div id="info">
+                    <div id="name">Базулько Максим</div>
+                    <div id="role">Роль: База техник, монтиватор</div>
+                </div>
+                <div id="socials">
+                    <div id="TelegramBW"></div>
+                    <div id="VK" onclick="window.location.href = 'https://vk.com/baza_minecraft_2005'"></div>
+                </div>
+            </div>
+            <div id="person">
+                <div id="info">
+                    <div id="name">Храповицкий Илья</div>
+                    <div id="role">Роль: Программист</div>
+                </div>
+                <div id="socials">
+                    <div id="TelegramBW"></div>
+                    <div id="VK" onclick="window.location.href = 'https://vk.com/id503153310'"></div>
+                </div>
+            </div>
+            <div id="person">
+                <div id="info">
+                    <div id="name">Деревянкин Алексей</div>
+                    <div id="role">Роль: Дизайнер</div>
+                </div>
+                <div id="socials">
+                    <div id="TelegramBW"></div>
+                    <div id="VK" onclick="window.location.href = 'https://vk.com/kurohiro'"></div>
+                </div>
+            </div>
+            <div id="person">
+                <div id="info">
+                    <div id="name">ВГТУ</div>
+                    <div id="role">Роль: Учебное заведение</div>
+                </div>
+                <div id="socials">
+                    <div id="Telegram" onclick="window.location.href = 'https://t.me/VSTU_today'"></div>
+                    <div id="VK" onclick="window.location.href = 'https://vk.com/politexvoronezh'"></div>
+                </div>
+            </div>
+        </div>
+        <div id="companyname"></div>
+    </div>
+    <div id="infocontainer">
+        Маленькая компания студентов, <br>
+        которая решила облегчить жизнь <br>
+        студентам ВГТУ и жителям Воронежа <br>
+        путем создания сайта с расписанием <br>
+        автобусов, идущих через корпус <br>
+        ВГТУ №2 (Плехановская 11)
+    </div>
+</body>
+</html>

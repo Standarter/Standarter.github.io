@@ -1,0 +1,345 @@
+body
+{
+    margin: 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#uppermenu
+{
+    background-image: url("Images/img1e.jpg");
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+#menuimage1
+{
+    background-image: url("Images/Img2.png");
+    width: 100%;
+    height: 250px;
+    mix-blend-mode: normal;
+}
+#menutext1
+{
+    position: relative;
+    right: 5%;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    opacity: 1;
+    width: 25%;
+    text-align: center;
+    text-shadow:1px 0 1px #000, 
+                0 1px 1px #000, 
+                -1px 0 1px #000, 
+                0 -1px 1px #000;
+    scale: 1.00;
+    transition: 1s;
+    
+}
+#uppermenu:hover #menutext1
+{
+    position: relative;
+    right: 5%;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    opacity: 1;
+    width: 25%;
+    text-align: center;
+    text-shadow:1px 0 1px #000, 
+                0 1px 1px #000, 
+                -1px 0 1px #000, 
+                0 -1px 1px #000;
+    scale: 1.05;
+    transition: 1s;
+}
+#middlemenu
+{
+    align-self: center;
+    width: 80%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#middlemenu div
+{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#businfo
+{
+    width: 40%;
+    font-size: 25px;
+    margin-left: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 25px;
+    -webkit-box-shadow: 10px 4px 0px 0px rgba(38, 117, 178, 1);
+    -moz-box-shadow: 10px 4px 0px 0px rgba(38, 117, 178, 1);
+    box-shadow: 10px 4px 0px 0px rgba(38, 117, 178, 1);
+    transition: 1s;
+}
+#businfo:hover
+{
+    width: 40%;
+    font-size: 25px;
+    margin-left: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 25px;
+    -webkit-box-shadow: 10px 4px 0px 0px rgba(34, 159, 255, 1);
+    -moz-box-shadow: 10px 4px 0px 0px rgba(34, 159, 255, 1);
+    box-shadow: 10px 4px 0px 0px rgba(34, 159, 255, 1);
+    scale: 1.05;
+    transition: 1s;
+}
+#businfo dl
+{
+    margin-left: 25px;
+}
+#busmap
+{
+
+}
+#busmapimage
+{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url("Images/bus37.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 25px;
+    -webkit-box-shadow: 10px 4px 0px 0px rgba(38, 117, 178, 1);
+    -moz-box-shadow: 10px 4px 0px 0px rgba(38, 117, 178, 1);
+    box-shadow: 10px 4px 0px 0px rgba(38, 117, 178, 1);
+    transition: 1s;
+}
+#busmapimage:hover
+{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url("Images/bus37.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 25px;
+    -webkit-box-shadow: 10px 4px 0px 0px rgba(34, 159, 255, 1);
+    -moz-box-shadow: 10px 4px 0px 0px rgba(34, 159, 255, 1);
+    box-shadow: 10px 4px 0px 0px rgba(34, 159, 255, 1);
+
+    scale: 1.05;
+    transition: 1s;
+}
+.InfoText1
+{
+    font-variant: small-caps;
+    font-weight: bolder;
+    font-size: 30px;
+}
+#middlemenu2
+{
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    outline: 1px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: #0e4b81;
+}
+#cardcontainer
+{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.buscard
+{
+    width: 180px;
+    height: 260px;
+    border: 5px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 25px;
+    -webkit-box-shadow: 10px 4px 0px 0px rgb(131, 131, 131);
+    -moz-box-shadow: 10px 4px 0px 0px rgb(131, 131, 131);
+    box-shadow: 10px 4px 0px 0px rgb(131, 131, 131);
+    transition: 1s;
+}
+.buscard:hover
+{
+    width: 180px;
+    height: 260px;
+    border: 5px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    scale: 1.05;
+    -webkit-box-shadow: 10px 4px 0px 0px rgb(203, 203, 203);
+    -moz-box-shadow: 10px 4px 0px 0px rgb(203, 203, 203);
+    box-shadow: 10px 4px 0px 0px rgb(203, 203, 203);
+    transition: 1s;
+}
+.imagecontainer
+{
+    height: calc(100% - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.buscardimage
+{
+    height: 80%;
+    aspect-ratio: 1/1;
+    mix-blend-mode: multiply;
+    background-image: url("Images/busicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.buscardtext
+{
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+    vertical-align: middle;
+    background-color: #2675b2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 3px 3px 0px #000000;
+    color: white;
+    transition: 1s;
+}
+.buscard:hover .buscardtext
+{
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+    vertical-align: middle;
+    background-color: #2675b2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 3px 3px 0px #000b84;
+    color: white;
+    transition: 1s;
+}
+#bottommenu
+{
+    height: fit-content;
+}
+#persons
+{
+    margin-top: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#person
+{
+    width: 500px;
+    height: 80px;
+    display: flex;
+    outline: 1px solid black;
+    margin: 10px;
+    -webkit-box-shadow: 10px 4px 0px 0px rgb(131, 131, 131);
+    -moz-box-shadow: 10px 4px 0px 0px rgb(131, 131, 131);
+    box-shadow: 10px 4px 0px 0px rgb(131, 131, 131);
+    transition: 1s;
+}
+#person:hover
+{
+    width: 500px;
+    height: 80px;
+    display: flex;
+    outline: 1px solid black;
+    -webkit-box-shadow: 10px 4px 0px 0px rgb(74, 73, 73);
+    -moz-box-shadow: 10px 4px 0px 0px rgb(74, 73, 73);
+    box-shadow: 10px 4px 0px 0px rgb(74, 73, 73);
+    scale: 1.05;
+    transition: 1s;
+}
+#socials
+{
+    display: flex;
+    align-items: center;
+}
+#socials div
+{
+    width: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+#info
+{
+    width: calc(500px - 120px);
+    align-self: center;
+    font-size: 20px;
+}
+#info div
+{
+    margin: 5px;
+}
+#Telegram
+{
+    background-image: url("Images/telegram.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}
+#TelegramBW
+{
+    background-image: url("Images/telegrambw.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}
+#VK
+{
+    background-image: url("Images/vk.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}
+#VKBW
+{
+    background-image: url("Images/vkbw.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}
+#infocontainer
+{
+    margin-top: 50px;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    background-color: #1f5b89;
+    font-size: 25px;
+}
