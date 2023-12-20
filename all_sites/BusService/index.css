@@ -374,7 +374,7 @@ body
 {
     background-image: url("Images/img1em.jpg");
     width: 100%;
-    height: 500px;
+    height: fit-content;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -383,21 +383,21 @@ body
 }
 #menuimage1
 {
-    background-image: url("Images/Img2.png");
-    background-size: cover;
+    background-image: url("Images/Img2m.png");
+    background-size: contain;
     background-repeat: no-repeat;
     width: 90%;
+    height: 150px;
     mix-blend-mode: normal;
 }
 #menutext1
 {
-    position: relative;
-    right: 5%;
+    position: inherit;
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     opacity: 1;
-    width: 25%;
+    width: 100%;
     text-align: center;
     text-shadow:1px 0 1px #000, 
                 0 1px 1px #000, 
@@ -431,15 +431,15 @@ body
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 #middlemenu div
 {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 0 0;
 }
 #businfo
 {
+    margin: 0 0;
     width: 100%;
     font-size: 25px;
     margin-bottom: 10px;
@@ -455,6 +455,7 @@ body
 }
 #businfo:hover
 {
+    margin: 0 0;
     width: 40%;
     font-size: 25px;
     margin-bottom: 10px;
@@ -622,7 +623,7 @@ body
 }
 #person
 {
-    width: 500px;
+    width: 90%;
     height: 80px;
     display: flex;
     outline: 1px solid black;
